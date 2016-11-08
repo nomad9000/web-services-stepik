@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="209d7f04-28d2-4596-b266-1b7562987d0e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/etc/gunicorn.conf" afterPath="$PROJECT_DIR$/etc/gunicorn.conf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/init.sh" afterPath="$PROJECT_DIR$/init.sh" />
     </list>
     <ignored path="web-services-stepik.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -42,21 +42,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gunicorn.conf" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gunicorn.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/etc/gunicorn.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            <state relative-caret-position="30">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="init.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="init.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/init.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -79,9 +79,9 @@
       <list>
         <option value="$PROJECT_DIR$/hello.py" />
         <option value="$PROJECT_DIR$/etc/hello.py" />
-        <option value="$PROJECT_DIR$/init.sh" />
         <option value="$PROJECT_DIR$/etc/nginx.conf" />
         <option value="$PROJECT_DIR$/etc/gunicorn.conf" />
+        <option value="$PROJECT_DIR$/init.sh" />
       </list>
     </option>
   </component>
@@ -478,18 +478,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/init.sh">
+    <entry file="file://$PROJECT_DIR$/etc/gunicorn.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="33" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+        <state relative-caret-position="30">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/etc/gunicorn.conf">
+    <entry file="file://$PROJECT_DIR$/init.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        <state relative-caret-position="45">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding />
         </state>
       </provider>
