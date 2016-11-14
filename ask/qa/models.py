@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from datetime import datetime
 
 # Create your models here.
 class QuestionManager(models.Manager):
@@ -12,13 +13,13 @@ class Question(models.Model):
     object = QuestionManager()
     title = models.CharField(max_length=1024)
     text = models.TextField()
-    added_at = models.DateTimeField()
+    added_at = models.DateTimeField(default=datetime.now)
     rating = models.IntegerField()
     author = models.ForeignKey(User, blank=True, null=True)
     likes = models.ManyToManyField(User, related_name='user-likes')
 
 class Answer(models.Model):
     text = models.TextField()
-    added_at = models.DateTimeField()
+    added_at = models.DateTimeField(default=datetime.now)
     question = models.ForeignKey(Question, related_name='question-answer')
     author = models.ForeignKey(User, blank=True, null=True)
