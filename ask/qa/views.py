@@ -8,7 +8,7 @@ def test(request, *args, **kwargs):
     return HttpResponse('OK', status=200)
 
 def mainpage(request):
-    questions = QuestionManager.new()
+    questions = Question.objects.new()
     limit = 10
     try:
         page = int(request.GET.get('page', 1))
@@ -24,7 +24,7 @@ def mainpage(request):
     })
 
 def popularpage(request):
-    questions = QuestionManager.popular()
+    questions = Question.objects.popular()
     limit = 10
     try:
         page = int(request.GET.get('page', 1))
