@@ -20,9 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '*oo7q_=f=o*-2pfj#a+17&75izp2b-90%=_0+q31zb4$@a4h=-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-TEMPLATE_DEBUG = True
+TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -59,11 +59,11 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
 
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
+#TEMPLATE_LOADERS = (
+    #'django.template.loaders.filesystem.Loader',
+    #'django.template.loaders.app_directories.Loader',
 #     'django.template.loaders.eggs.Loader',
-)
+#)
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
