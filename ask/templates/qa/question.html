@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>{{question.title}}</title>
+    </head>
+    <body>
+        {{question.text}}
+        {% for answer in answers %}
+            {{answer.text}}
+        {% endfor %}
+    </body>
+</html>

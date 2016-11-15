@@ -53,6 +53,17 @@ ROOT_URLCONF = 'ask.urls'
 
 WSGI_APPLICATION = 'ask.wsgi.application'
 
+#Templates
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
+
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+#     'django.template.loaders.eggs.Loader',
+)
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
