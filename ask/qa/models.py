@@ -17,10 +17,9 @@ class Question(models.Model):
     rating = models.IntegerField(default=0)
     author = models.ForeignKey(User, blank=True, null=True)
     likes = models.ManyToManyField(User, related_name='user-likes')
-    answer_set = Answer.objects.all()
 
 class Answer(models.Model):
     text = models.TextField()
     added_at = models.DateTimeField(default=datetime.now)
-    question = models.ForeignKey(Question, related_name='question-answer')
+    question = models.ForeignKey(Question)
     author = models.ForeignKey(User, blank=True, null=True)
