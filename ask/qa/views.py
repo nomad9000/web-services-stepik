@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.paginator import Paginator
@@ -11,8 +12,8 @@ def mainpage(request):
     limit = 10
     try:
         page = int(request.GET.get('page', 1))
-    except:
-        page = 1
+    except ValueError:
+        raise Http404
     paginator = Paginator(questions, limit)
     paginator.baseulr = '/question/'
     questions = paginator.page(page)
@@ -27,8 +28,8 @@ def popularpage(request):
     limit = 10
     try:
         page = int(request.GET.get('page', 1))
-    except:
-        page = 1
+    except ValueError:
+        raise Http404
     paginator = Paginator(questions, limit)
     paginator.baseulr = '/popular/'
     questions = paginator.page(page)
