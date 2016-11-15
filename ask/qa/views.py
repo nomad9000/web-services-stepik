@@ -17,7 +17,7 @@ def mainpage(request):
     paginator = Paginator(questions, limit)
     paginator.baseulr = '/question/'
     questions = paginator.page(page)
-    return render(request, '/qa/questions.html', {
+    return render(request, 'qa/questions.html', {
         'questions': questions.object_list,
         'paginator': paginator,
         'page': page,
@@ -33,7 +33,7 @@ def popularpage(request):
     paginator = Paginator(questions, limit)
     paginator.baseulr = '/popular/'
     questions = paginator.page(page)
-    return render(request, '/qa/questions.html', {
+    return render(request, 'qa/questions.html', {
         'questions': questions.object_list,
         'paginator': paginator,
         'page': page,
