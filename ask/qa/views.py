@@ -41,7 +41,7 @@ def popularpage(request):
 
 def questionpage(request, questionid):
     q = Question.objects.get(id = questionid)
-    answers = q.answer_set
+    answers = q.answer_set.all()
     return render(request, 'qa/question.html', {
         'question': q,
         'answers': answers,
