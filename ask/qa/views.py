@@ -60,7 +60,7 @@ def askpage(request):
             return HttpResponseRedirect('/question/' + str(q.id) + '/')
     else:
         form = AskForm()
-    return render(request, 'qa/ask.html', { 'form': form })
+        return render(request, 'qa/ask.html', { 'form': form })
 
 @require_POST
 def answerpage(request):

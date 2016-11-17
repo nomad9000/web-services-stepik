@@ -1,0 +1,8 @@
+[2016-11-17 07:07:38 +0000] [3180] [INFO] Starting gunicorn 19.6.0
+[2016-11-17 07:07:38 +0000] [3184] [INFO] Starting gunicorn 19.6.0
+[2016-11-17 07:07:38 +0000] [3184] [INFO] Listening at: http://0.0.0.0:8000 (3184)
+[2016-11-17 07:07:38 +0000] [3180] [INFO] Listening at: http://0.0.0.0:8080 (3180)
+[2016-11-17 07:07:38 +0000] [3184] [INFO] Using worker: sync
+[2016-11-17 07:07:38 +0000] [3180] [INFO] Using worker: sync
+[2016-11-17 07:07:38 +0000] [3191] [INFO] Booting worker with pid: 3191
+[2016-11-17 07:07:38 +0000] [3192] [INFO] Booting worker with pid: 3192
