@@ -57,7 +57,7 @@ def askpage(request):
         form = AskForm(request.POST)
         if form.is_valid():
             q = form.save()
-            return HttpResponseRedirect('/question/' + str(q.pk) + '/')
+            return HttpResponseRedirect('/question/' + str(q.id) + '/')
     else:
         form = AskForm()
     return render(request, 'qa/ask.html', { 'form': form })
@@ -67,6 +67,6 @@ def answerpage(request):
     form = AnswerForm(request.POST)
     if form.is_valid():
         a = form.save()
-        return HttpResponseRedirect('/question/' + str(a.question.pk) + '/')
+        return HttpResponseRedirect('/question/' + str(a.question.id) + '/')
     else:
-        return HttpResponseRedirect('/question/' + str(form.question.pk) + '/?err=1')
+        return HttpResponseRedirect('/question/' + str(form.question.id) + '/?err=1')
