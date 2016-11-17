@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>{{question.title}}</title>
-    </head>
     <body>
-        {{question.text}}
-        {% for answer in answers %}
-            {{answer.text}}
-        {% endfor %}
-        <form method="POST" action="/answer/">
+        <form method="POST" action="/ask/">
             <table>
                 {% csrf_token %}
                 {{ form.as_table }}
