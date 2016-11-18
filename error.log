@@ -6,3 +6,9 @@
 [2016-11-17 07:07:38 +0000] [3180] [INFO] Using worker: sync
 [2016-11-17 07:07:38 +0000] [3191] [INFO] Booting worker with pid: 3191
 [2016-11-17 07:07:38 +0000] [3192] [INFO] Booting worker with pid: 3192
+[2016-11-17 09:36:45 +0000] [3180] [INFO] Handling signal: term
+[2016-11-17 09:36:45 +0000] [3192] [INFO] Worker exiting (pid: 3192)
+[2016-11-17 09:36:45 +0000] [3191] [INFO] Worker exiting (pid: 3191)
+[2016-11-17 09:36:45 +0000] [3184] [INFO] Handling signal: term
+[2016-11-17 09:36:49 +0000] [3184] [INFO] Shutting down: Master
+[2016-11-17 09:36:50 +0000] [3180] [INFO] Shutting down: Master
