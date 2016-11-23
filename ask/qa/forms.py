@@ -19,7 +19,7 @@ class AskForm(forms.Form):
         )
 
 class AnswerForm(forms.Form):
-    text = forms.CharField()
+    text = forms.CharField(widget=forms.Textarea)
     question = forms.IntegerField()
     #def clean(self):
         #return self.cleaned_data
@@ -32,6 +32,7 @@ class AnswerForm(forms.Form):
             question_id=self.cleaned_data['question'],
             author=getattr(self, '_user', None),
         )
+
 class SignupForm(forms.Form):
     username = forms.CharField()
     email = forms.EmailField()

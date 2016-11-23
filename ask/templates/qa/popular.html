@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        {% load staticfiles %}
+        <title>The most popular questions</title>
+        <link rel="stylesheet" href="{% static "css/main.css" %}" type="text/css">
+    </head>
     <body>
         {% for question in questions%}
-            <a href="{{paginator.baseurl}}/{{question.id}}/">{{question.title}}</a>
+            <div class="entry">
+                <a href="{{paginator.baseulr}}{{question.id}}/">{{question.title}}</a>
+            </div>
         {% endfor %}
     </body>
 </html>

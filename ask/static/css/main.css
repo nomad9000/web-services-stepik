@@ -1,0 +1,136 @@
+.plate {
+    position: relative;
+    width: auto;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22pt;
+    text-align: center;
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.logform {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    float: left;
+}
+
+.questions {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22pt;
+    text-align: left;
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    float: left;
+}
+
+.questtitle {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    text-align: center;
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.questtext {
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    text-align: left;
+    border: 1px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.entry {
+    width: auto;
+    clear: both;
+    overflow: hidden;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    text-align: left;
+    border: 1px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+.titles {
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.answerauthor {
+    position: relative;
+    width: 250px;
+    border-right: 1px;
+    border-right-style: solid;
+    float: left;
+}
+
+.answertext {
+    margin: 10px;
+    position: relative;
+    width: auto;
+    float: left;
+}
+
+.questionnumber {
+    visibility: hidden;
+}
+
+.form {
+    text-align: center;
+}
+
+.links {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    float: left;
+
+}
+
+.logandquest {
+    overflow: auto;
+}

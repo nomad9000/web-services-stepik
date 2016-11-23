@@ -12,3 +12,218 @@
 [2016-11-17 09:36:45 +0000] [3184] [INFO] Handling signal: term
 [2016-11-17 09:36:49 +0000] [3184] [INFO] Shutting down: Master
 [2016-11-17 09:36:50 +0000] [3180] [INFO] Shutting down: Master
+[2016-11-21 14:34:51 +0000] [5095] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:34:51 +0000] [5095] [INFO] Listening at: http://0.0.0.0:8080 (5095)
+[2016-11-21 14:34:51 +0000] [5095] [INFO] Using worker: sync
+[2016-11-21 14:34:51 +0000] [5099] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:34:51 +0000] [5099] [INFO] Listening at: http://0.0.0.0:8000 (5099)
+[2016-11-21 14:34:51 +0000] [5099] [INFO] Using worker: sync
+[2016-11-21 14:34:51 +0000] [5106] [INFO] Booting worker with pid: 5106
+[2016-11-21 14:34:51 +0000] [5107] [INFO] Booting worker with pid: 5107
+[2016-11-21 19:37:32 +0000] [5107] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[2016-11-21 19:37:36 +0000] [5107] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[2016-11-21 19:37:36 +0000] [5107] [ERROR] Error handling request /favicon.ico
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[2016-11-21 14:39:47 +0000] [5095] [INFO] Handling signal: term
+[2016-11-21 14:39:47 +0000] [5106] [INFO] Worker exiting (pid: 5106)
+[2016-11-21 14:39:47 +0000] [5099] [INFO] Handling signal: term
+[2016-11-21 19:39:47 +0000] [5107] [INFO] Worker exiting (pid: 5107)
+[2016-11-21 14:39:47 +0000] [5099] [INFO] Shutting down: Master
+[2016-11-21 14:39:47 +0000] [5095] [INFO] Shutting down: Master
+[2016-11-21 14:39:50 +0000] [5355] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:39:50 +0000] [5355] [INFO] Listening at: http://0.0.0.0:8000 (5355)
+[2016-11-21 14:39:50 +0000] [5355] [INFO] Using worker: sync
+[2016-11-21 14:39:50 +0000] [5362] [INFO] Booting worker with pid: 5362
+[2016-11-21 14:39:50 +0000] [5352] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:39:50 +0000] [5352] [INFO] Listening at: http://0.0.0.0:8080 (5352)
+[2016-11-21 14:39:50 +0000] [5352] [INFO] Using worker: sync
+[2016-11-21 14:39:50 +0000] [5363] [INFO] Booting worker with pid: 5363
+[2016-11-21 19:39:56 +0000] [5362] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[2016-11-21 14:40:48 +0000] [5352] [INFO] Handling signal: term
+[2016-11-21 14:40:48 +0000] [5363] [INFO] Worker exiting (pid: 5363)
+[2016-11-21 14:40:48 +0000] [5355] [INFO] Handling signal: term
+[2016-11-21 14:40:48 +0000] [5352] [INFO] Shutting down: Master
+[2016-11-21 19:40:48 +0000] [5362] [INFO] Worker exiting (pid: 5362)
+[2016-11-21 14:40:48 +0000] [5355] [INFO] Shutting down: Master
+[2016-11-21 14:40:49 +0000] [5441] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:40:49 +0000] [5441] [INFO] Listening at: http://0.0.0.0:8080 (5441)
+[2016-11-21 14:40:49 +0000] [5441] [INFO] Using worker: sync
+[2016-11-21 14:40:49 +0000] [5446] [INFO] Booting worker with pid: 5446
+[2016-11-21 14:40:49 +0000] [5448] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:40:49 +0000] [5448] [INFO] Listening at: http://0.0.0.0:8000 (5448)
+[2016-11-21 14:40:49 +0000] [5448] [INFO] Using worker: sync
+[2016-11-21 14:40:49 +0000] [5452] [INFO] Booting worker with pid: 5452
+[2016-11-21 14:42:50 +0000] [5441] [INFO] Handling signal: term
+[2016-11-21 14:42:50 +0000] [5446] [INFO] Worker exiting (pid: 5446)
+[2016-11-21 14:42:50 +0000] [5448] [INFO] Handling signal: term
+[2016-11-21 14:42:50 +0000] [5452] [INFO] Worker exiting (pid: 5452)
+[2016-11-21 14:42:50 +0000] [5441] [INFO] Shutting down: Master
+[2016-11-21 14:42:50 +0000] [5448] [INFO] Shutting down: Master
+[2016-11-21 14:42:51 +0000] [5525] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:42:51 +0000] [5525] [INFO] Listening at: http://0.0.0.0:8080 (5525)
+[2016-11-21 14:42:51 +0000] [5525] [INFO] Using worker: sync
+[2016-11-21 14:42:51 +0000] [5530] [INFO] Booting worker with pid: 5530
+[2016-11-21 14:42:51 +0000] [5532] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:42:51 +0000] [5532] [INFO] Listening at: http://0.0.0.0:8000 (5532)
+[2016-11-21 14:42:51 +0000] [5532] [INFO] Using worker: sync
+[2016-11-21 14:42:51 +0000] [5536] [INFO] Booting worker with pid: 5536
+[2016-11-21 14:43:22 +0000] [5525] [INFO] Handling signal: term
+[2016-11-21 14:43:22 +0000] [5532] [INFO] Handling signal: term
+[2016-11-21 14:43:22 +0000] [5530] [INFO] Worker exiting (pid: 5530)
+[2016-11-21 14:43:22 +0000] [5536] [INFO] Worker exiting (pid: 5536)
+[2016-11-21 14:43:22 +0000] [5532] [INFO] Shutting down: Master
+[2016-11-21 14:43:22 +0000] [5525] [INFO] Shutting down: Master
+[2016-11-21 14:43:23 +0000] [5598] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:43:23 +0000] [5598] [INFO] Listening at: http://0.0.0.0:8080 (5598)
+[2016-11-21 14:43:23 +0000] [5598] [INFO] Using worker: sync
+[2016-11-21 14:43:23 +0000] [5604] [INFO] Booting worker with pid: 5604
+[2016-11-21 14:43:23 +0000] [5606] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:43:23 +0000] [5606] [INFO] Listening at: http://0.0.0.0:8000 (5606)
+[2016-11-21 14:43:23 +0000] [5606] [INFO] Using worker: sync
+[2016-11-21 14:43:23 +0000] [5610] [INFO] Booting worker with pid: 5610
+[2016-11-21 19:43:36 +0000] [5610] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[2016-11-21 19:44:16 +0000] [5610] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[2016-11-21 14:44:35 +0000] [5598] [INFO] Handling signal: term
+[2016-11-21 14:44:35 +0000] [5604] [INFO] Worker exiting (pid: 5604)
+[2016-11-21 14:44:35 +0000] [5606] [INFO] Handling signal: term
+[2016-11-21 19:44:35 +0000] [5610] [INFO] Worker exiting (pid: 5610)
+[2016-11-21 14:44:35 +0000] [5606] [INFO] Shutting down: Master
+[2016-11-21 14:44:35 +0000] [5598] [INFO] Shutting down: Master
+[2016-11-21 14:44:35 +0000] [5691] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:44:35 +0000] [5691] [INFO] Listening at: http://0.0.0.0:8080 (5691)
+[2016-11-21 14:44:35 +0000] [5691] [INFO] Using worker: sync
+[2016-11-21 14:44:35 +0000] [5697] [INFO] Booting worker with pid: 5697
+[2016-11-21 14:44:36 +0000] [5699] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:44:36 +0000] [5699] [INFO] Listening at: http://0.0.0.0:8000 (5699)
+[2016-11-21 14:44:36 +0000] [5699] [INFO] Using worker: sync
+[2016-11-21 14:44:36 +0000] [5703] [INFO] Booting worker with pid: 5703
+[2016-11-21 19:44:41 +0000] [5703] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[2016-11-21 14:45:51 +0000] [5691] [INFO] Handling signal: term
+[2016-11-21 14:45:51 +0000] [5697] [INFO] Worker exiting (pid: 5697)
+[2016-11-21 14:45:51 +0000] [5699] [INFO] Handling signal: term
+[2016-11-21 19:45:51 +0000] [5703] [INFO] Worker exiting (pid: 5703)
+[2016-11-21 14:45:51 +0000] [5691] [INFO] Shutting down: Master
+[2016-11-21 14:45:51 +0000] [5699] [INFO] Shutting down: Master
+[2016-11-21 14:45:52 +0000] [5797] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:45:52 +0000] [5797] [INFO] Listening at: http://0.0.0.0:8080 (5797)
+[2016-11-21 14:45:52 +0000] [5797] [INFO] Using worker: sync
+[2016-11-21 14:45:52 +0000] [5802] [INFO] Booting worker with pid: 5802
+[2016-11-21 14:45:52 +0000] [5804] [INFO] Starting gunicorn 19.6.0
+[2016-11-21 14:45:52 +0000] [5804] [INFO] Listening at: http://0.0.0.0:8000 (5804)
+[2016-11-21 14:45:52 +0000] [5804] [INFO] Using worker: sync
+[2016-11-21 14:45:52 +0000] [5808] [INFO] Booting worker with pid: 5808
+[2016-11-21 19:45:54 +0000] [5808] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[2016-11-21 19:59:43 +0000] [5808] [ERROR] Error handling request /
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/wsgi.py", line 187, in __call__
+    self.load_middleware()
+  File "/usr/local/lib/python2.7/dist-packages/django/core/handlers/base.py", line 47, in load_middleware
+    mw_class = import_by_path(middleware_path)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/module_loading.py", line 31, in import_by_path
+    error_prefix, module_path, class_name))
+ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a "SessionAuthenticationMiddleware" attribute/class
+[2016-11-21 20:00:35 +0000] [5808] [INFO] Worker exiting (pid: 5808)
+[2016-11-21 15:00:35 +0000] [5802] [INFO] Worker exiting (pid: 5802)
+[2016-11-21 15:00:35 +0000] [5804] [INFO] Handling signal: term
+[2016-11-21 15:00:35 +0000] [5797] [INFO] Handling signal: term
+[2016-11-21 15:00:35 +0000] [5797] [INFO] Shutting down: Master
+[2016-11-21 15:00:35 +0000] [5804] [INFO] Shutting down: Master

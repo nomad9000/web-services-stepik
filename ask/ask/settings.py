@@ -47,9 +47,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #'django.contrib.auth.models.User',
-    #'django.contrib.auth.middleware.AuthenticationMiddleware',
-    #'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'django.contrib.auth.models.User',
 )
 
 ROOT_URLCONF = 'ask.urls'
@@ -60,6 +58,10 @@ WSGI_APPLICATION = 'ask.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
+)
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
 )
 
 #TEMPLATE_LOADERS = (
@@ -77,10 +79,10 @@ DATABASES = {
     #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #}
     'default':{
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ask',
-        'USER': 'usr',
-        'PASSWORD': 'pwd',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'ask.db'),
+        #'USER': 'usr',
+        #'PASSWORD': 'pwd',
     }
 }
 

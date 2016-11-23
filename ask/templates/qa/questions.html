@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head></head>
+    <head>
+        {% load staticfiles %}
+        <title>Q&A Board</title>
+        <link rel="stylesheet" href="{% static "css/main.css" %}" type="text/css">
+    </head>
     <body>
-        {% for question in questions%}
-            <a href="{{paginator.baseurl}}/{{question.id}}/">{{question.title}}</a>
-        {% endfor %}
+        <div class="plate">
+            <h1>Q&A Board</h1>
+        </div>
+        <div class="logandquest">
+            <div>
+                <div class="logform">
+                    {% if user.is_anonymous %}
+                    <form method="POST" action="/login/">
+                        <table>
+                            <div class="form_rows">
+                                {% csrf_token %}
+                                {{ loginform.as_table }}
+                            </div>
+                        </table>
+                        <div class="button">
+                            <button type="submit">Log In</button>
+                        </div>
+                    </form>
+                    {% else %}
+                        You are logged as {{ user }}
+                    {% endif %}
+                </div>
+                <div class="links">
+                    sadfsfsdfsdfdsf
+                </div>
+            </div>
+
+        </div>
+                <div class="questions">
+                {% for question in questions%}
+                    <a href="{{paginator.baseulr}}{{question.id}}/">{{question.title}}</a>
+                {% endfor %}
+            </div>
     </body>
 </html>

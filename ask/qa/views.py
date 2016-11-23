@@ -5,6 +5,7 @@ from django.http import HttpResponse
 from django.core.paginator import Paginator
 from django.views.decorators.http import require_POST
 from django.contrib import auth
+from django.contrib.auth import logout
 from forms import *
 
 from models import *
@@ -19,6 +20,7 @@ def mainpage(request):
         page = int(request.GET.get('page', 1))
     except ValueError:
         raise Http404
+    loginform = LoginForm()
     paginator = Paginator(questions, limit)
     paginator.baseulr = '/question/'
     questions = paginator.page(page)
@@ -26,6 +28,8 @@ def mainpage(request):
         'questions': questions.object_list,
         'paginator': paginator,
         'page': page,
+        'loginform': loginform,
+        'user': request.user,
     })
 
 def popularpage(request):
@@ -36,9 +40,9 @@ def popularpage(request):
     except ValueError:
         raise Http404
     paginator = Paginator(questions, limit)
-    paginator.baseulr = '/popular/'
+    paginator.baseulr = '/question/'
     questions = paginator.page(page)
-    return render(request, 'qa/questions.html', {
+    return render(request, 'qa/popular.html', {
         'questions': questions.object_list,
         'paginator': paginator,
         'page': page,
@@ -47,10 +51,11 @@ def popularpage(request):
 def questionpage(request, questionid):
     q = Question.objects.get(id = questionid)
     answers = q.answer_set.all()
+    form = AnswerForm(initial={'question': q.id})
     return render(request, 'qa/question.html', {
         'question': q,
         'answers': answers,
-        'form': AskForm(),
+        'form': form,
     })
 
 def askpage(request):
@@ -85,7 +90,7 @@ def signuppage(request):
             return HttpResponseRedirect('/')
     else:
         form = SignupForm()
-        return render(request, 'qa/signup.html', { 'form': form })
+    return render(request, 'qa/signup.html', { 'form': form })
 
 def loginpage(request):
     if request.method == 'POST':
@@ -96,4 +101,9 @@ def loginpage(request):
             return HttpResponseRedirect('/')
     else:
         form = LoginForm()
-        return render(request, 'qa/login.html', { 'form': form })
+    return render(request, 'qa/login.html', { 'form': form })
+
+#def logoutpage(request):
+#    if request.method == 'POST':
+#        logout(request)
+#        request.
