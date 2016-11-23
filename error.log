@@ -227,3 +227,7 @@ ImproperlyConfigured: Module "django.contrib.auth.middleware" does not define a 
 [2016-11-21 15:00:35 +0000] [5797] [INFO] Handling signal: term
 [2016-11-21 15:00:35 +0000] [5797] [INFO] Shutting down: Master
 [2016-11-21 15:00:35 +0000] [5804] [INFO] Shutting down: Master
+[2016-11-23 15:12:47 +0000] [4779] [INFO] Starting gunicorn 19.6.0
+[2016-11-23 15:12:47 +0000] [4779] [INFO] Listening at: http://0.0.0.0:8000 (4779)
+[2016-11-23 15:12:47 +0000] [4779] [INFO] Using worker: sync
+[2016-11-23 15:12:47 +0000] [4783] [INFO] Booting worker with pid: 4783
