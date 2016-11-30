@@ -1,3 +1,4 @@
+{% load i18n %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -9,21 +10,52 @@
         <div class="questtitle">{{ question.title }}</div>
         <div class="questtext">{{question.text}}</div>
         <div class="titles">Answers:</div>
-        {% for answer in answers %}
-            <div class="entry">
-                <div class="answerauthor">{{ answer.author }}<br>{{ answer.added_at }}</div>
-                <div class="answertext">{{answer.text}}</div>
-            </div>
-        {% endfor %}
-        <div class="form">
-            <form method="POST" action="/answer/">
-                <table>
-                    {% csrf_token %}
-                    {{ form.text }}
-                    <div class="questionnumber">{{ form.question }}</div>
-                </table>
-                <button type="submit">Send answer</button>
-            </form>
+        <div id = "answ">
+            {% for answer in answers %}
+                <div class="entry">
+                    <div class="answerauthor">{{ answer.author }}<br>{{ answer.added_at }}</div>
+                    <div class="answertext">{{answer.text}}</div>
+                </div>
+            {% endfor %}
         </div>
+            <div class="form">
+                <form method="POST" action="/answer/">
+                    <table>
+                        {% csrf_token %}
+                        {{ form.text }}
+                        <div class="questionnumber">{{ form.question }}</div>
+                    </table>
+                    <button type="submit">Send answer</button>
+                </form>
+            </div>
+        <button type="button" onclick="updater()">Change Content</button>
+
     </body>
+        <script src = "{% static "js/jquery-3.1.1.min.js" %}"></script>
+        <script>
+            var curtime = new Date().toUTCString();
+            $(function updater(){
+                $.ajax({
+                    type: "GET",
+                    url: "/updateanswers/",
+                    data: {
+                        "question": {{ question.id }},
+                        "time": curtime
+                    },
+
+                    success: function(data) {
+                        {% comment %}var answers = document.getElementById("answ");
+                        answers.append(data.responseText);
+                        curtime = new Date();
+                        setTimeout(updater(), 10);{% endcomment %}
+                        $('#answ').append(data);
+                        curtime = new Date().toUTCString();
+                    },
+                    complete: function() {
+                        {% comment %}curtime = new Date().toUTCString();{% endcomment %}
+                        setTimeout(updater, 10000);
+                    }
+                })
+            });
+        </script>
 </html>

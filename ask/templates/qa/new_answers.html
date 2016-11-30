@@ -1,0 +1,6 @@
+{% for answer in newanswers %}
+    <div class="entry">
+        <div class="answerauthor">{{ answer.author }}<br>{{ answer.added_at }}</div>
+        <div class="answertext">{{answer.text}}</div>
+    </div>
+{% endfor %}

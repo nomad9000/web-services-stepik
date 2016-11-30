@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         {% load staticfiles %}
         <title>Q&A Board</title>
@@ -25,11 +25,19 @@
                         </div>
                     </form>
                     {% else %}
-                        You are logged as {{ user }}
+                        You are logged as {{ user }} <br>
+                        <form method="POST" action="/logout/">
+                            <div class="button">
+                                {% csrf_token %}
+                                <button type="submit">Log out</button>
+                            </div>
+                        </form>
                     {% endif %}
                 </div>
                 <div class="links">
-                    sadfsfsdfsdfdsf
+                    <p><a href="/signup/">Sign up</a>
+                    <p><a href="/popular/">Popular questions</a>
+                    <p><a href="/ask/">Ask a question</a>
                 </div>
             </div>
 

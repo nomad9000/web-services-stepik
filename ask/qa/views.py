@@ -1,10 +1,13 @@
 from django.http import Http404
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.shortcuts import render_to_response
 from django.http import HttpResponse
 from django.core.paginator import Paginator
 from django.views.decorators.http import require_POST
 from django.contrib import auth
+from datetime import datetime
+import json
 from django.contrib.auth import logout
 from forms import *
 
@@ -103,7 +106,22 @@ def loginpage(request):
         form = LoginForm()
     return render(request, 'qa/login.html', { 'form': form })
 
-#def logoutpage(request):
-#    if request.method == 'POST':
-#        logout(request)
-#        request.
+def updateanswers(request):
+    q = request.GET.get('question')
+    time = request.GET.get('time')
+    print (time)
+    time = str.join(' ', time.split(None)[1:5])
+    time = datetime.strptime(time, '%d %b %Y %H:%M:%S')
+    try:
+        response = Answer.objects.filter(question = q)
+        response = response.filter(added_at__gt = time)
+    except Exception as e:
+        print (e.strerror)
+
+    response = render_to_response('qa/new_answers.html', {'newanswers': response})
+    return response
+
+def logoutpage(request):
+    if request.method == 'POST':
+       logout(request)
+    return HttpResponseRedirect('/')

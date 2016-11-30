@@ -80,7 +80,7 @@ DATABASES = {
     #}
     'default':{
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'ask.db'),
+        'NAME': os.path.join(BASE_DIR, 'ask1.db'),
         #'USER': 'usr',
         #'PASSWORD': 'pwd',
     }
